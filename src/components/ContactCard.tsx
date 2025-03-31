@@ -14,7 +14,8 @@ const ContactCard = ({ contact }: Props) => (
       <div className="d-flex align-items-center mb-3">
         <Image
           src={contact.image}
-          alt={`${contact.firstName} ${contact.lastName}`}
+          alt={`${contact.firstName} 
+                ${contact.lastName}`}
           width={75}
           height={75}
           className="me-3 rounded-circle"

@@ -16,12 +16,6 @@ const ListPage = async () => {
       user: { email: string; id: string; randomKey: string };
     } | null,
   );
-  // const owner = (session && session.user && session.user.email) || '';
-  // const stuff = await prisma.stuff.findMany({
-  //   where: {
-  //     owner,
-  //   },
-  // });
 
   const contacts: Contact[] = [{
     firstName: 'Philip',
