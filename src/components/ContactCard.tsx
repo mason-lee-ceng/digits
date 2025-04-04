@@ -3,6 +3,7 @@
 import { Card } from 'react-bootstrap';
 import Image from 'next/image';
 import { Contact } from '@/lib/validationSchemas';
+import Link from 'next/link';
 
 interface Props {
   contact: Contact;
@@ -31,6 +32,9 @@ const ContactCard = ({ contact }: Props) => (
       </div>
       <Card.Text>{contact.description}</Card.Text>
     </Card.Body>
+    <Card.Footer>
+      <Link href={`/edit/${contact.id}`}>Edit</Link>
+    </Card.Footer>
   </Card>
 );
 

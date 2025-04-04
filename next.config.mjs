@@ -5,6 +5,7 @@ const nextConfig = {
           'github.com',
           'avatars0.githubusercontent.com',
           'www.ics.hawaii.edu',
+          'static.voices.com',
         ],
     },
 };
