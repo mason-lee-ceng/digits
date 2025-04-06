@@ -6,6 +6,7 @@ import { loggedInProtectedPage } from '@/lib/page-protection';
 import authOptions from '@/lib/authOptions';
 import { Contact } from '@/lib/validationSchemas';
 import ContactCard from '@/components/ContactCard';
+import { Note } from '@prisma/client';
 
 /** Render a list of stuff for the logged in user. */
 const ListPage = async () => {
@@ -23,6 +24,12 @@ const ListPage = async () => {
     },
   });
 
+  const notes: Note[] = await prisma.note.findMany({
+    where: {
+      owner,
+    },
+  });
+
   return (
     <main>
       <Container id="list" fluid className="py-3">
@@ -33,6 +40,8 @@ const ListPage = async () => {
               {contacts.map((contact) => (
                 <Col key={`Contact-${contact.firstName}`}>
                   <ContactCard contact={contact} />
+                  notes=
+                  {notes.filter((note) => note.contactId === contact.id)}
                 </Col>
               ))}
             </Row>
