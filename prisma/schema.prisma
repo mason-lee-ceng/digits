@@ -45,21 +45,11 @@ model Stuff {
 }
 
 model Contact {
-    id          Int    @id @default(autoincrement())
-    firstName   String
-    lastName    String
-    address     String
-    image       String
-    description String
-    notes       Note[]
-    owner       String
-}
-
-model Note {
-    id        Int      @id @default(autoincrement())
-    contactId Int
-    note      String
-    owner     String
-    createdAt DateTime @default(now())
-    Contact   Contact  @relation(fields: [contactId], references: [id])
+  id          Int    @id @default(autoincrement())
+  firstName   String
+  lastName    String
+  address     String
+  image       String
+  description String
+  owner       String
 }
