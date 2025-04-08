@@ -19,7 +19,7 @@ To keep this codebase simple and small, some important capabilities are intentio
 - Deployment
 
 Examples of the these capabilities will be provided elsewhere.
-
+<img src="doc\Screenshot 2025-04-07 223707.png">
 ## Installation
 
 First, [install PostgreSQL](https://www.postgresql.org/download/). Then create a database for your application.
